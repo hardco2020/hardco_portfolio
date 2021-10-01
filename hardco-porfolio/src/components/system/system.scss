@@ -1,0 +1,133 @@
+@import '../../global.scss';
+.system{
+
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include mobile{
+        justify-content:space-around;
+    }
+    // position: relative;
+    .title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+        overflow: hidden;
+        .code{
+            font-size:80px;
+            @include mobile{
+                font-size:40px;
+                overflow: hidden;
+            }
+        }
+    }
+    .content{
+        width:100vw;
+        height:600px;
+        margin-left:20px;
+        margin-right:20px;
+        margin-top:10px;
+        z-index:3;
+        // // background-color: yellow;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include mobile{
+            flex-direction: column;
+        }
+        .card{
+            margin-left:20px;
+            width: 250px;
+            height: 80%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px -8px black;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding:20px;
+            transition: all 1s ease;
+            @include mobile{
+                width: 200px;
+                height: 70%;;
+                overflow-y: hidden;
+                flex-direction: row;;
+                justify-content: center;
+                margin-bottom:20px;
+            }
+            &.featured{
+                width:300px;
+                height: 80%;
+                margin: 0 30px;
+            }
+
+            &:hover{
+                transform:scale(1.1);
+            }
+
+            .expressIcon{
+                width:125px;
+                height: 125px;
+            }
+            .iconArea{
+                margin-top: 10px;
+                width:140px;
+                height: 140px;
+                @include mobile{
+                    width:100px;
+                    height: 200px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                img{
+                    width:130px;
+                    height: 130px;
+                    object-fit: cover;
+                    @include mobile{
+                        width:60px;
+                        height:60px;
+                    }
+                }
+            }
+            .featureArea{
+                @include mobile{
+                    display: none;
+                    // display: flex;
+                    // flex-direction: column;
+                    // justify-content: center;
+                    // height:100%;
+                    // float: left;
+                    // overflow-y: auto;       
+                    // padding:10px;
+                }
+                .featured{
+                    width: 150px;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin-top:15px;
+                    @include mobile{
+                        padding:5px;
+                        width: 150px;
+                        font-size: 12px;
+                        height:100%;
+                    }
+                    .featuredIcon{
+                        margin-right:15px;
+                        @include mobile{
+                            width:12px;
+                            height: 12px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

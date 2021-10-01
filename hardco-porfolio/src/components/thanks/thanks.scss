@@ -1,0 +1,116 @@
+@import '../../global.scss';
+.thanks{
+    display:flex;
+    background-color: #D1C4B7;
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+    }
+    .left{
+        flex:4;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        overflow: hidden;
+        .imgContainerLeft{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            background-color: white;
+            padding:5px;
+            width:250px;
+            height:350px;
+            object-fit: cover;
+            transform: rotate(-10deg);
+            margin-left:20px;
+            @include mobile{
+                transform: none; 
+                margin-left: 0;
+            }
+            img{
+                width:350px;
+                height: 350px;
+                object-fit: cover;
+            }
+        }
+
+    }
+    .center{
+        flex:4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size:20px;
+        font-weight: lighter;
+        color:#897063;
+        @include mobile{
+            flex:3;
+            font-size:10px;
+        }
+        .upper{
+            flex:4;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            @include mobile{
+                padding-top: 15px;
+                padding:10px;
+                align-items: flex-start;
+                flex:3;
+            }
+            .slogan{
+                line-height: 50px; 
+                @include mobile{
+                    line-height: 30px;
+                }
+            }
+        }
+        .down{
+            flex:4;
+            @include mobile{
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+            }
+            .gif{
+                width:350px;
+                height: 350px;
+                @include mobile{
+                    width:170px;
+                    height: 170px;
+                }
+            }
+        }
+    }
+    .right{
+        flex:4;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        overflow: hidden;
+        @include mobile{
+            display: none;
+        }
+        .imgContainerRight{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width:250px;
+            height:350px;
+            background-color: white;
+            padding:5px;
+            object-fit: cover;
+            transform: rotate(5deg);
+            margin-left:20px;
+            img{
+                width:350px;
+                height: 350px;
+                object-fit: cover;
+            }
+        }
+    }
+
+}

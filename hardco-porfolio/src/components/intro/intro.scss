@@ -1,7 +1,13 @@
+@import '../../global.scss';
 .intro{
     background-color: white;
     display:flex;
     overflow: hidden;
+
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+    }
     .left{
         flex:0.5;
         overflow: hidden;
@@ -14,8 +20,16 @@
             overflow: hidden;
             float:right;
             border-radius: 50%;
+            @include mobile{
+                border-radius: 20px;
+            }
             img{
                 object-fit: cover;
+                @include mobile{
+                    border-radius: 20px;
+                    height: 100%;
+                    width:60%;
+                }
             }
         }
     }
@@ -30,9 +44,17 @@
             flex-direction: column;
             justify-content: center;
 
+            @include mobile{
+                padding-left: 0;
+                align-items: center;
+            }
             h1{
                 font-size:60px;
                 margin:10px 0;
+
+                @include mobile{
+                    font-size: 40px;
+                }
             }
             h2{
                 font-size:35px;
@@ -41,6 +63,9 @@
             h3{
                 font-size:30px;
 
+                @include mobile{
+                    font-style: 25px;
+                }
                 span{
                     font-size: inherit;
                     color:crimson;
@@ -57,9 +82,24 @@
                     }
                 }
             }
+            .aboutmeArea{
+                .tome{
+                    width: 50px;
+                    .aboutme{
+                        margin-top:20px;
+                        width:50px;
+                        height:50px;
+                        cursor:pointer;
+                    }
+                    @include mobile{
+                        display: flex;
+                        margin-right: 200px;
+                    }
+                }
+            }
            
         }
-        a{
+        .anchor{
             position: absolute;
             bottom: 10px;
             left:40%;

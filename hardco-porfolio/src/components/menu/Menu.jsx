@@ -1,23 +1,28 @@
 import React from 'react'
 import './menu.scss'
+import { useTranslation } from 'react-i18next'
 export default function Menu({menuOpen,setMenuOpen}) {
+    const { t } = useTranslation();
     return (
         <div className={"menu " +  (menuOpen && "active")}>
             <ul>
-                <li onClick={()=>setMenuOpen(false)}>
-                    <a href="#intro">首頁</a>
+            <li onClick={()=>setMenuOpen(false)}>
+                    <a href="/aboutme">{t("aboutme")}</a>
                 </li>
                 <li onClick={()=>setMenuOpen(false)}>
-                    <a href="#porfolio">作品集</a>
+                    <a href="#intro">{t("index")}</a>
                 </li>
                 <li onClick={()=>setMenuOpen(false)}>
-                    <a href="#works">專業領域</a>
+                    <a href="#porfolio">{t("portfolio")}</a>
                 </li>
                 <li onClick={()=>setMenuOpen(false)}>
-                    <a href="#testimonials">顧客評論</a>
+                    <a href="#works">{t("work")}</a>
                 </li>
                 <li onClick={()=>setMenuOpen(false)}>
-                    <a href="#contact">聯絡我</a>
+                    <a href="#testimonials">{t("comment")}</a>
+                </li>
+                <li onClick={()=>setMenuOpen(false)}>
+                    <a href="#contact">{t("contact")}</a>
                 </li>
 
             </ul>

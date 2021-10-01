@@ -1,27 +1,27 @@
-import Contact from "./components/contact/Contact";
-import Intro from "./components/intro/Intro";
-import Porfolio from "./components/porfolio/Porfolio";
-import Testimonials from "./components/testimonials/Testimonials";
-import Topbar from "./components/topbar/Topbar";
-import Works from "./components/works/Works";
-import './app.scss'
-import { useState } from "react";
-import Menu from "./components/menu/Menu";
-function App() {
-  const [menuOpen,setMenuOpen] = useState(false)
-  return (
-    <div className="app">
-      <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-      <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/> 
-      <div className="sections">
-        <Intro/>
-        <Porfolio/>
-        <Works/>
-        <Testimonials/>
-        <Contact/>
 
-      </div>
-    </div>
+import{
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom'
+import Home from "./pages/home/Home";
+import Mywork from './pages/mywork/Mywork';
+import AboutMe from './pages/aboutme/AboutMe';
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Home/>
+        </Route>
+        <Route path="/mywork/:title">
+          <Mywork/>
+        </Route>
+        <Route path="/aboutme">
+          <AboutMe/>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

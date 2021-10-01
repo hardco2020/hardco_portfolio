@@ -1,13 +1,15 @@
 import { ArrowForward, YouTube } from "@material-ui/icons";
 import React from "react";
 import "./testimonials.scss";
+import { useTranslation } from 'react-i18next'
 export default function Testimonials() {
+  const { t } = useTranslation();
   const data = [
       {
           id:1,
           name:"Iren Chen",
           title:"Chinese Teacher",
-          img:"./assets/avatar.jpg",
+          img:"./assets/avatar2.jpg",
           icon:"assets/facebook.png",
           desc:"讚"
       },
@@ -15,7 +17,7 @@ export default function Testimonials() {
         id:2,
         name:"Iren Chen",
         title:"Chinese Teacher",
-        img:"./assets/avatar.jpg",
+        img:"./assets/avatar3.jpg",
         icon:"assets/facebook.png",
         desc:"讚",
         featured:true
@@ -24,17 +26,19 @@ export default function Testimonials() {
         id:3,
         name:"Iren Chen",
         title:"Chinese Teacher",
-        img:"assets/avatar.jpg",
+        img:"assets/avatar4.jpeg",
         icon:"assets/facebook.png",
         desc:"讚",
     }
   ]
   return (
     <div className="testimonials" id="testimonials">
-      <h1>顧客評論</h1>
+      <h1>{t("comment")}</h1>
+      {/* <Zoom right cascade transition="all 2s ease"> */}
       <div className="container">
         {data.map((d)=>(
-        <div className={d.featured ? "card featured" : "card"}>
+        // <div className={d.featured ? "card featured" : "card"}>
+        <div className="card">
           <div className="top">
             <ArrowForward className="imgLeft" />
             <img className="user" src={d.img} alt="" />
@@ -50,6 +54,7 @@ export default function Testimonials() {
         </div>
         ))}
       </div>
+      {/* </Zoom> */}
     </div>
   );
 }

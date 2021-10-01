@@ -1,0 +1,17 @@
+FROM node:14 As Production
+
+ENV NODE_ENV=production
+
+WORKDIR /user/src/client
+
+COPY package.json .
+COPY yarn.lock .
+
+
+RUN yarn install 
+COPY . .
+
+RUN yarn build
+WORKDIR ./dist
+
+CMD yarn start

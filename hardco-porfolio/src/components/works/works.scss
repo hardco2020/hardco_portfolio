@@ -1,3 +1,4 @@
+@import '../../global.scss';
 .works{
     background-color: crimson;
     display:flex;
@@ -11,6 +12,9 @@
         font-size:150px;
         color:white;
 
+        @include mobile{
+            display: none;
+        }
         &.left{
             right:30px;
         }
@@ -25,6 +29,12 @@
         position: absolute;
         left:0;
         transition: all 1s ease-out;
+
+        @include mobile{
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+        }
         .container{
             width: 100vw;
             display: flex;
@@ -39,6 +49,12 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                
+                @include mobile{
+                    width: 90%;
+                    height: 150px;
+                    margin: 15px 0;  
+                }
 
                 .left{
                     flex: 4;
@@ -55,6 +71,11 @@
                         flex-direction: column;
                         justify-content: space-between;
 
+                        @include mobile{
+                            
+                            height: 100%;
+                        }
+
                         .imgContainer{
                             width: 40px;
                             height: 40px;
@@ -64,22 +85,41 @@
                             align-content: center;
                             justify-content: center;
 
+                            @include mobile{
+                                width: 20px;
+                                height: 20px;
+                            }
                             .imgPhone{
                                 width: 25px;
-                                margin:auto;
+                                margin: auto;
+                                @include mobile{
+                                    width: 15px;
+                                }
                             }
                         }
                         h2{
                             font-size:25px;
+                            @include mobile{
+                                font-size:10px;
+                            }
+    
                         }
                         p{
                             font-size:15px;
+                            @include mobile{
+                                font-size:5px;
+                            }
                         }
                         span{
                             font-size:12px;
                             font-weight: 600;
                             text-decoration: underline;
                             cursor: pointer;
+
+                            @include mobile{
+                                font-size:5px;
+                                display: none;
+                            }
                         }
                     }
                 }

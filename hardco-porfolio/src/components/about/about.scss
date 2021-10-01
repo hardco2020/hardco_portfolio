@@ -1,0 +1,132 @@
+@import '../../global.scss';
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mobile{
+        flex-direction: column;
+    }   
+    // background-image: url("assets/ocean.png");
+    .left{
+        flex:5;
+        display: flex;
+        justify-content: center;
+        @include mobile{
+            align-items: center;
+        }
+        .imageContainer{
+            width: 300px;
+            height:300px;
+            border-radius: 50%;
+            background-color: white;
+            overflow: hidden;
+            @include mobile{
+                width: 150px;
+                height: 150px;
+            }   
+        }
+        img{
+            width: 450px;
+            object-fit: cover;
+            @include mobile{
+                width: 250px;
+            }   
+        }
+    }
+    .right{
+        flex:4;
+        display:flex;
+        flex-direction: column;
+        background-color: white;
+        padding:30px;
+        margin-right:20px;
+        border-radius: 10px;
+        align-items: center;
+        justify-content: center;
+        animation: fadein;
+        animation-duration:3s;
+        @include mobile{
+            margin-right: 0;
+            padding: 10px;
+            flex:10;
+        }   
+        .title{
+            font-size: 30px;
+            margin-bottom:20px;
+            width:300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            @include mobile{
+                font-size: 20px;
+                margin-bottom: 10px;
+                overflow: hidden;
+            }   
+            .rate{
+                margin-bottom:10px;
+                @include mobile{
+                    margin-bottom: 5px;
+                    overflow:hidden;
+                }   
+                .rateIcon{
+                    font-size:2.5rem;
+                    margin-right:10px;
+                    color: rgb(255, 234, 47);
+                    @include mobile{
+                        font-size:1.2rem;;
+                    }   
+                }
+            }
+            .name{
+                overflow:hidden;
+            }
+            
+        }
+        .content{
+            width:400px;
+            height:400px;
+            display: flex;
+            flex-direction: column;
+            padding:0 5px;
+            justify-content: center;
+            align-items: center;
+            @include mobile{
+                width:320px;
+                height:320px;
+                font-size: 12px;
+            }   
+            .subtitle{
+                font-weight: bold;
+            }
+            .featured{
+                color:gray;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 15px;
+
+                .featuredIcon{
+                    color:black !important;
+                    margin-right:10px;
+                }
+            }
+            .featuredIcon{
+                color:black !important;
+                margin-right:10px;
+            }
+        }
+        @keyframes fadein {
+            0%{
+                opacity: 0;
+            }
+            50%{
+                opacity: 0.5;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+    }
+}

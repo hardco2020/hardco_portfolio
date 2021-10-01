@@ -1,0 +1,80 @@
+@import '../../global.scss';
+.userflow{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    .title{
+        display: flex;
+        justify-content: center;
+        overflow:hidden;
+        .code{
+            font-size: 90px;
+            @include mobile{
+                font-size: 45px;
+                overflow:hidden;
+            }
+        }
+    }
+    .content{
+        display: flex;
+        width: 100%;
+        height:100%;  
+        align-items: center;
+        justify-content: space-around;
+
+
+        @include mobile{
+            flex-direction: column;
+            width:350px;
+            height:500px;
+            padding:20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .contentImg{
+            display: flex;
+            flex-direction: column;
+            @include mobile{
+                // width: 80%;
+                // height: 90%;
+                width: 250px;
+                height: 250px;
+                margin-right: 30px;
+            }
+            .tools{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                margin-top:10px;
+                @include mobile{
+                    width:250px;
+                    height: 20%;
+                }
+                .toolButton{
+                    margin-left:10px;
+                }
+            }
+            .pic1{
+                width: 500px;
+                height:400px;
+                @include mobile{
+                    width: 250px;
+                    height: 200px;
+                }
+
+            }
+            .pic2{
+                width: 400px;
+                height:400px;
+                @include mobile{
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+        }
+        
+        
+
+        
+    }
+}

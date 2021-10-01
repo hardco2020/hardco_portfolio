@@ -1,29 +1,31 @@
 import React, { useState } from "react";
 import "./works.scss";
-import { ArrowBack, ArrowForward, PhoneIphone } from "@material-ui/icons";
+import { ArrowBack, ArrowForward} from "@material-ui/icons";
+import { useTranslation } from "react-i18next";
 export default function Works() {
+  const { t } = useTranslation();
   const [currentSlide, setCurrentSlide] = useState(0);
   const data = [
     {
       id: "1",
-      icon: "./assets/blog.png",
-      title: "部落格",
-      desc: "將自己腦海裡記得的技術都化為文章，希望能幫助到所有在這條路上努力的人",
+      icon: "./assets/blogging.png",
+      title: t("blog"),
+      desc: t("blog-Desc"),
       img: "./assets/blog.png",
     },
     {
       id: "2",
-      icon: "./assets/blog.png",
-      title: "手機",
-      desc: "將自己腦海裡記得的技術都化為文章，希望能幫助到所有在這條路上努力的人",
-      img: "./assets/blog.png",
+      icon: "./assets/smartphone.png",
+      title: t("app"),
+      desc:t("app-Desc"),
+      img: "./assets/phoneWork.jpg", 
     },
     {
       id: "3",
-      icon: "./assets/blog.png",
-      title: "網頁",
-      desc: "將自己腦海裡記得的技術都化為文章，希望能幫助到所有在這條路上努力的人",
-      img: "./assets/blog.png",
+      icon: "./assets/website.png",
+      title: t("web"),
+      desc: t("web-Desc"),
+      img: "./assets/webWork.png",
     },
   ];
 
@@ -44,15 +46,15 @@ export default function Works() {
               <div className="left">
                 <div className="leftContainer">
                   <div className="imgContainer">
-                    <PhoneIphone className="imgPhone" />
+                    <img src={d.icon} alt="" className="imgPhone" />
                   </div>
                   <h2>{d.title}</h2>
                   <p>{d.desc}</p>
-                  <span>projects</span>
+                  {/* <span>projects</span> */}
                 </div>
               </div>
               <div className="right">
-                <img src="assets/blog.png" alt="" />
+                <img src={d.img} alt="" />
               </div>
             </div>
           </div>

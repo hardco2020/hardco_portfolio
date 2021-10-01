@@ -1,16 +1,21 @@
 import React, { useEffect, useRef } from "react";
 import "./intro.scss";
 import { KeyboardArrowDown } from "@material-ui/icons";
+import Fade from "react-reveal/Fade";
 import { init } from "ityped";
-
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 export default function Intro() {
+  const { t } = useTranslation();
+  const front = t("frontend");
+  console.log(front)
   const textRef = useRef();
   useEffect(() => {
     init(textRef.current, {
       showCursor: true,
-      backDelay:  1500,
-      backSpeed: 60,
-      strings: ["前端工程師", "後端工程師","部落格創作者"],
+      backDelay: 1500,
+      backSpeed: 100,
+      strings: ["Front-end", "Back-end","Creator"],
     });
   }, []);
   return (
@@ -22,13 +27,22 @@ export default function Intro() {
       </div>
       <div className="right">
         <div className="wrapper">
-          <h2>你好，我是</h2>
-          <h1>游旻昌</h1>
+          <Fade down cascade>
+            <h2>{t("hello")}</h2>
+          </Fade>
+          <Fade right cascade>
+            <h1>{t("name")}</h1>
+          </Fade>
           <h3>
-            正在學習的 <span ref={textRef}></span>
+          {t("learning")} <span ref={textRef}></span>
           </h3>
+         <div className="aboutmeArea">
+          <Link to="/aboutme" className="tome">
+            <img src="assets/video.png" alt="" className="aboutme" />
+          </Link>
+          </div>
         </div>
-        <a href="#porfolio">
+        <a href="#porfolio" className="anchor">
           <KeyboardArrowDown className="pulldown" />
         </a>
       </div>

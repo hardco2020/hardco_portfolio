@@ -1,0 +1,46 @@
+@import '../../global.scss';
+.finalDesign{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .title{
+        display: flex;
+        justify-content: center;
+        @include mobile{
+            justify-content: flex-start;
+            flex:1;
+        }
+        .code{
+            font-size: 70px;
+            
+            @include mobile{
+                font-size:30px;
+            }
+        }
+    }
+    .content{
+        padding:10px;
+        width:60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        @include mobile{
+            flex:8;
+        }
+        img{
+            width:125px;
+            border-radius: 10px;
+            margin-right:40px;
+            margin-bottom:20px;
+            box-shadow: 0px 0px 15px -8px black;
+            @include mobile{
+                width:60px;
+                margin-right:20px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
