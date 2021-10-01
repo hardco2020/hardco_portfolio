@@ -13,6 +13,8 @@ COPY . .
 
 ENV GENERATE_SOURCEMAP false
 
+COPY .env ./dist/
+
 RUN yarn build
 WORKDIR ./dist
 
