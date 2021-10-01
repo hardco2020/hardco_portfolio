@@ -10,7 +10,7 @@ COPY yarn.lock .
 
 RUN yarn install 
 COPY . .
-
+COPY .env ./dist/
 RUN yarn build
 WORKDIR ./dist
 
