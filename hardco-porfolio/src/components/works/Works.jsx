@@ -11,7 +11,7 @@ export default function Works() {
       icon: "./assets/blogging.png",
       title: t("blog"),
       desc: t("blog-Desc"),
-      img: "./assets/blog.png",
+      img: "./assets/blog_3.jpg",
     },
     {
       id: "2",
