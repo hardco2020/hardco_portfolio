@@ -11,6 +11,8 @@ COPY yarn.lock .
 RUN yarn install 
 COPY . .
 
+ENV GENERATE_SOURCEMAP false
+
 RUN yarn build
 WORKDIR ./dist
 
