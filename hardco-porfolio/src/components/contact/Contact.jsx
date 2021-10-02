@@ -13,7 +13,7 @@ export default function Contact() {
     return (
         <div className="contact" id="contact">
            <div className="left">
-            <Bounce left>
+            <Bounce left duration={1000}>
                <img src="assets/selfie2.jpg" alt=""/>
             </Bounce>
            </div>

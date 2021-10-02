@@ -8,7 +8,7 @@ export default function TopbarWork({menuOpen , setMenuOpen}) {
     <div className={"topbar " + (menuOpen && "active")}>
       <div className="wrapper">
         <div className="left">
-          <a href="#product" className="logo">Hardco.</a>
+          <a href="/" className="logo">Hardco.</a>
           <a href="https://github.com/hardco2020" className="link">
           <div className="itemContainer">
             <img src="../assets/Github.png" alt="" className="icon"/>

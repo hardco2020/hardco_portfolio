@@ -8,10 +8,10 @@ export default function MenuMe({menuOpen,setMenuOpen}) {
         <div className={"menu " +  (menuOpen && "active")}>
             <ul>
             <li onClick={()=>setMenuOpen(false)}>
-                    <a href="/">{t("index")}</a>
-                </li>
-                <li onClick={()=>setMenuOpen(false)}>
                     <Link to='#about'>{t("aboutme")}</Link>
+            </li>
+            <li onClick={()=>setMenuOpen(false)}>
+                    <a href="/">{t("index")}</a>
                 </li>
                 <li onClick={()=>setMenuOpen(false)}>
                 <Link to='#goal'>{t("goal")}</Link>
