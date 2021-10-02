@@ -16,7 +16,7 @@ export default function About() {
       <Flip left>
         <div className="imageContainer">
         
-          <img src="assets/selfie_2.jpg" alt="" />
+          <img src="assets/selfie_2.jpg" alt="" /> 
         </div>
       </Flip>
       </div>
