@@ -28,7 +28,7 @@ export default function MenuWork({menuOpen,setMenuOpen}) {
                 </li>
                 <li onClick={()=>setMenuOpen(false)}>
                     <a href="#finalDesign">{t("finaldesign")}</a>
-                <Link to='#finalDesign'>{t("finaldesign")}</Link>
+                {/* <Link to='#finalDesign'>{t("finaldesign")}</Link> */}
                 </li>
 
             </ul>
