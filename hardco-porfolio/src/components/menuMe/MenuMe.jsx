@@ -8,22 +8,27 @@ export default function MenuMe({menuOpen,setMenuOpen}) {
         <div className={"menu " +  (menuOpen && "active")}>
             <ul>
             <li onClick={()=>setMenuOpen(false)}>
-                    <Link to='#about'>{t("aboutme")}</Link>
+                    <a href="#about">{t("aboutme")}</a>
+                    {/* <Link to='#about'>{t("aboutme")}</Link> */}
             </li>
             <li onClick={()=>setMenuOpen(false)}>
                     <a href="/">{t("index")}</a>
                 </li>
                 <li onClick={()=>setMenuOpen(false)}>
-                <Link to='#goal'>{t("goal")}</Link>
+                    <a href="#goal">{t("goal")}</a>
+                {/* <Link to='#goal'>{t("goal")}</Link> */}
                 </li>
                 <li onClick={()=>setMenuOpen(false)}>
-                <Link to='#experience'>{t("experience")}</Link>
+                    <a href="#experience">{t("experience")}</a>
+                {/* <Link to='#experience'>{t("experience")}</Link> */}
                 </li>
                 <li onClick={()=>setMenuOpen(false)}>
-                <Link to='#skill'>{t("skill")}</Link>
+                    <a href="#skill">{t("skill")}</a>
+                {/* <Link to='#skill'>{t("skill")}</Link> */}
                 </li>
                 <li onClick={()=>setMenuOpen(false)}>
-                <Link to='#slogan'>{t("slogan")}</Link>
+                    <a href="#slogan">{t("slogan")}</a>
+                {/* <Link to='#slogan'>{t("slogan")}</Link> */}
                 </li>
 
             </ul>

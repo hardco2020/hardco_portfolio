@@ -7,6 +7,10 @@ import{
 import Home from "./pages/home/Home";
 import Mywork from './pages/mywork/Mywork';
 import AboutMe from './pages/aboutme/AboutMe';
+import smoothscrollPolyfill from 'smoothscroll-polyfill';
+import smoothscrollAnchorPolyfill from 'smoothscroll-anchor-polyfill';
+smoothscrollPolyfill.polyfill();
+
 function App() {
   return (
     <Router>

@@ -7,6 +7,11 @@ import Works from "../../components/works/Works";
 import './home.scss'
 import { useState } from "react";
 import Menu from "../../components/menu/Menu";
+
+import smoothscrollPolyfill from 'smoothscroll-polyfill';
+import smoothscrollAnchorPolyfill from 'smoothscroll-anchor-polyfill';
+smoothscrollPolyfill.polyfill();
+
 function Home() {
   const [menuOpen,setMenuOpen] = useState(false)
   return (

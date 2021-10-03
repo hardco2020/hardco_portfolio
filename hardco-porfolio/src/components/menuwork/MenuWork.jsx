@@ -11,18 +11,23 @@ export default function MenuWork({menuOpen,setMenuOpen}) {
                     <a href="/">{t("index")}</a>
                 </li>
                 <li onClick={()=>setMenuOpen(false)}>
-                    <Link to='#product'>{t("intro")}</Link>
+                    <a href="#product">{t("intro")}</a>
+                    {/* <Link to='#product'>{t("intro")}</Link> */}
                 </li>
                 <li onClick={()=>setMenuOpen(false)}>
-                <Link to='#story'>{t("story")}</Link>
+                    <a href="#story">{t("story")}</a>
+                    {/* <Link to='#story'>{t("story")}</Link> */}
                 </li>
                 <li onClick={()=>setMenuOpen(false)}>
-                <Link to='#userflow'>{t("userflow")}</Link>
+                    <a href="#userflow">{t("userflow")}</a>
+                {/* <Link to='#userflow'>{t("userflow")}</Link> */}
                 </li>
                 <li onClick={()=>setMenuOpen(false)}>
-                <Link to='#system'>{t("system")}</Link>
+                    <a href="#system">{t("system")}</a>
+                {/* <Link to='#system'>{t("system")}</Link> */}
                 </li>
                 <li onClick={()=>setMenuOpen(false)}>
+                    <a href="#finalDesign">{t("finaldesign")}</a>
                 <Link to='#finalDesign'>{t("finaldesign")}</Link>
                 </li>
 

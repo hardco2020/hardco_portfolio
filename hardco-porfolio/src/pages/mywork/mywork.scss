@@ -7,11 +7,13 @@
         background-color: lightsalmon;
         position: relative;
         top:70px;
+        --scroll-behavior: smooth;
         scroll-behavior: smooth !important;
-        scroll-snap-type: y mandatory;
+        //transition: all 1 ease;
+        scroll-snap-type: y mandatory !important; 
         scrollbar-width:none;//for firefox
         &::-webkit-scrollbar{
-            display: none;
+            display: none; 
         }
 
         > *{

@@ -12,6 +12,7 @@
     align-items: center;
     justify-content: center;
     transition: all 1s ease;
+    -webkit-transition: all 1s ease !important;
     &.active{
         right:0;
     }

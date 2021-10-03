@@ -10,6 +10,11 @@ import './mywork.scss'
 import { useParams} from "react-router-dom"
 // import { webPorfolio} from '../../work'
 import { useTranslation } from 'react-i18next'
+import smoothscrollPolyfill from 'smoothscroll-polyfill';
+// import smoothscrollAnchorPolyfill from 'smoothscroll-anchor-polyfill';
+
+smoothscrollPolyfill.polyfill();
+
 function Mywork() {
     const { title } = useParams()
     const { t } = useTranslation();
