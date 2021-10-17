@@ -74,15 +74,15 @@
                     height:25px;
                 }
                 .user{
-                    height: 60px;
-                    width: 60px;
+                    height: 120px;
+                    width: 120px;
                     border-radius: 50%;
                     object-fit: cover;
                     margin: 0 30px;
                     
                     @include mobile{
-                        width: 30px;
-                        height: 30px;
+                        width: 50px;
+                        height: 50px;
                     }
                 }
             }
@@ -91,7 +91,7 @@
         .center{
             padding:10px;
             border-radius: 10px;
-            background-color:lightblue;
+            background-color:#CAE4E5;
 
             @include mobile{
                 font-size: 12px;
