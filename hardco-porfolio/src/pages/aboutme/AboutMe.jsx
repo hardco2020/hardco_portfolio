@@ -10,7 +10,7 @@ import Thanks from "../../components/thanks/Thanks";
 import smoothscrollPolyfill from 'smoothscroll-polyfill';
 
 // Import this package to apply the smoothscroll to anchor links
-import smoothscrollAnchorPolyfill from 'smoothscroll-anchor-polyfill';
+// import smoothscrollAnchorPolyfill from 'smoothscroll-anchor-polyfill';
 // (Unlike this package, smoothscroll-polyfill needs to be actively invoked: )
 smoothscrollPolyfill.polyfill();
 

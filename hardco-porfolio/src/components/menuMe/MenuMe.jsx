@@ -1,6 +1,5 @@
 import React from 'react'
 import './menuMe.scss'
-import { HashLink as Link}  from 'react-router-hash-link'
 import { useTranslation } from 'react-i18next'
 export default function MenuMe({menuOpen,setMenuOpen}) {
     const { t } = useTranslation();
